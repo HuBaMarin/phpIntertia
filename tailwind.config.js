@@ -15,8 +15,33 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            animation: {
+                glow: 'glow  2s ease-in-out infinite alternate',
+            },
+            height:{
+                "10v":"10vh",
+                "15v":"15vh",
+                "65v":"65vh",
+            },
+            colors:{
+                "header":"#122235",
+                "nav":"#209BD8",
+                "main":"#F7F7DC",
+                "footer":"#145A84"
+            },
+            keyframes: {
+                glow: {
+                    '0%,  100%': {
+                        textShadow: '0  0  10px #000,  0  0  20px #000,  0  0  30px #000,  0  0  40px #000',
+                    },
+                    '50%': {
+                        textShadow: '0  0  20px #000,  0  0  30px #000,  0  0  40px #000,  0  0  50px #000,  0  0  60px #000',
+                    },
+                },
+            },
         },
     },
 
-    plugins: [forms],
+    plugins: [forms,
+    require("daisyui")],
 };
