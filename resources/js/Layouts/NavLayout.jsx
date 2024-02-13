@@ -1,3 +1,5 @@
+import {Link} from "@inertiajs/react";
+
 export default function NavLayout() {
     return (
         <>
@@ -7,7 +9,7 @@ space-x-3 p-1">
                 <a href="#" className="btn btn-sm  btn-neutral">Home</a>
                 <a href="#" className="btn  btn-sm  btn-primary">About</a>
                 <a href="#" className="btn  btn-sm  btn-info">Contacta</a>
-                <a href="#" className="btn  btn-sm  btn-neutral">Proyectos</a>
+                <Link href={route('proyectos.index')} className="btn  btn-sm  btn-neutral">Proyectos</Link>
 
 
                 <a href="#" className="btn  btn-sm  btn-primary">Alumnos</a>

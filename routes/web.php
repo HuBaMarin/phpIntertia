@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProyectoController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,7 +19,7 @@ use App\Http\Controllers\MainController;
 Route::get("Main", fn ()=>
     Inertia::render("Main", [MainController::class,"Main"])
 );
-
+Route::resource("proyectos",ProyectoController::class);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
