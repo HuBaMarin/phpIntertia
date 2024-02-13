@@ -6,6 +6,7 @@ export default function Main() {
         <>
 
             <Layout>
+                <div className="miheader">Ejemplo</div>
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
@@ -18,6 +19,7 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
+                {/*el contenido es el children, se lo pasa al mainlayout y el mainlayout lo visualiza*/}
             </Layout>
 
 
