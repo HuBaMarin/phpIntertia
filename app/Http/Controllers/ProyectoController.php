@@ -14,8 +14,11 @@ class ProyectoController extends Controller
      */
     public function index()
     {
-        $proyectos = Proyecto::all();
-        return Inertia::render("proyectos/listado",compact('proyectos'));
+        $nombre = "proyectos";
+        $campos = (new Proyecto())->getFillable();
+        $filas = Proyecto::all();
+
+        return Inertia::render("proyectos/Listado",compact('nombre',"campos","filas"));
     }
 
     /**
